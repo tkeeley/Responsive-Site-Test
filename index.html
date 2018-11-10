@@ -1,0 +1,341 @@
+<!--***********************
+|                         |
+| Responsive Website Test |
+| Author: Tim Keeley 2017 |
+|                         |
+************************--> 
+
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Site Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="Cup O Code | hand-crafted web design and social media services" />
+    <meta property="og:url" content="http://www.cupocode.com" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image" content="http://www.cupocode.com/img/cupocode-og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" 
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  
+<style>
+
+@charset "UTF-8";
+  *, *:befrore, *:after {
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+html {
+  background: #1FA4B6;
+  overflow-Y: scroll;
+  transition: background 1s;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+body {
+  margin-top: 30px;
+}
+
+h1 {
+  color: #fff;
+  font-family: 'Racing Sans One', cursive;
+  font-size: 4rem;
+  text-align: center;
+  margin-top: 0;
+  width: 100%;
+}
+h1 span {
+  display: block;
+  font-size: 2.5rem;
+  margin: -1rem 0 0;
+}
+
+h2 {
+  text-align: center;
+  font-size: 3em;
+  color: white;
+  margin-bottom: 12px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px !important;
+  margin: 0 auto;
+  text-align: justify;
+  width: 20rem;
+}
+ul:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+
+li {
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  transition: transform .2s;
+}
+
+.view li:hover { 
+  transform: scale(1.1);
+  border-bottom: 2px solid white;
+}
+
+li:hover {
+  transform: scale(1.1);  /*for footer link*/
+}
+
+form {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: flex;
+  width: max-content;
+}
+.text-box {
+    /*width: 20%;*/
+    /*height: 10px;*/
+    padding: 12px;
+    font-size: 1.5em;
+    text-align: center;
+    border-radius: 20px;
+    border: 2px solid grey;
+    color: black;
+    margin: 10px;
+    /*display: block;*/
+}
+
+.button {
+  width: 100px;
+  /*height: 20px;*/
+  color: white;
+  background-color: #00BF37;
+  border-radius: 20px;
+  border: 3px solid white;
+  padding: 12px;
+  margin: 10px;
+  font-size: inherit;
+  cursor: pointer;
+  transition: transform .2s;
+  box-shadow: 8px 8px 8px rgba(35, 35, 35,0.8);
+
+}
+
+.button:hover {
+  transform: scale(1.1);
+  background-color: inherit;
+  color: white;
+  border-width: 3px;
+}
+
+.dektop, .mobile, .tablet {
+  box-shadow: inset 0 0 0 1em #333230, 0 1rem 2rem -1rem rgba(0, 0, 0, 0.6);
+  border-radius: 1rem;
+  margin: 1rem auto;
+  position: relative;
+  -webkit-backface-visibility: hidden;
+}
+.dektop iframe, .mobile iframe, .tablet iframe {
+  left: 1rem;
+  position: absolute;
+  top: 1rem;
+  transform-origin: 0 0;
+  background-color: white;
+}
+
+.dektop {
+  border-bottom: 3rem solid #c7c3c1;
+  height: 18rem;
+  width: 32rem;
+  margin: 0 10px;
+}
+
+.dektop:after {
+  bottom: -3rem;
+  content: '';
+  font-size: 2rem;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+.dektop:before {
+  
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #605e5d), color-stop(100%, #c7c3c1));
+  
+  border-radius: 50% 50% 1rem 1rem;
+  border-bottom: 0.3rem solid #605e5d;
+  bottom: -5rem;
+  content: '';
+  left: 50%;
+  height: 4rem;
+  margin-left: -3.5rem;
+  position: absolute;
+  width: 7rem;
+  z-index: -1;
+}
+.dektop iframe {
+  height: calc(400% - 8rem);
+  transform: scale(0.25);
+  width: calc(400% - 8rem);
+}
+
+.mobile {
+  border-bottom: 4rem solid #333230;
+  height: 18rem;
+  height: 28rem;
+  width: 18rem;
+}
+.mobile:after {
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 0.5rem white, 0 0 0.5rem rgba(0, 0, 0, 0.4);
+  bottom: -3rem;
+  content: '';
+  height: 3rem;
+  left: 50%;
+  margin-left: -1.5rem;
+  position: absolute;
+  width: 3rem;
+}
+.mobile iframe {
+  height: 35rem;
+  transform: scale(0.75);
+  width: 21.4rem;
+}
+
+.tablet {
+  border-bottom: 4rem solid #333230;
+  height: 27rem;
+  width: 22rem;
+}
+.tablet:after {
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 0.2rem white, 0 0 0.5rem rgba(0, 0, 0, 0.4);
+  bottom: -2.5rem;
+  content: '';
+  height: 2.5rem;
+  left: 50%;
+  margin-left: -1.5rem;
+  position: absolute;
+  width: 2.5rem;
+}
+.tablet iframe {
+  height: 63rem;
+  transform: scale(0.4);
+  width: 50rem;
+}
+
+img {
+  position: relative;
+  display: block;
+  width: 400px;
+  top: -100px;
+  margin: 0 auto !important;
+}
+
+.footer {
+  text-align: center;
+  color: white;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.edited {background-color: lightgrey; repeat scroll 0 0; cursor: default !important; color:grey; z-index: -9 !important; text-decoration: none; padding: inherit; pointer-events: none; opacity: .5;}
+
+</style>
+
+<!-- Sets Website Address to Variable -->
+<script>
+function newSite() {
+  var site = $('#id').val();
+  var iframe =document.getElementById('iframe');
+  iframe.src = 'http://' +  site;
+  iframe.src = iframe.src;
+  $('#id').val('');
+}  
+</script>
+
+</head>
+<h2>Responsive Site Test</h2>
+<form>
+      <input class="text-box" type="text" id="id" placeholder="www.yoursite.com" /></input>
+      <input class="button edited" id="submit" type="button" value="Test Site" onClick="newSite()" /></input>
+  </form>
+<body>
+<ul class="view">
+  <li id="dektop">Desktop</li>
+  <li id="tablet">Tablet</li>
+  <li id="mobile">Mobile</li>
+</ul>
+
+<div class="dektop">
+  <iframe id="iframe" src="https://www.timkeeley.com/" frameborder="0"></iframe>
+</div>
+<br>
+<ul>
+  <li></li>
+  <li class="footer" id="tablet" style="cursor:default">By: <a href="https://www.timkeeley.com">Tim Keeley</a></li>
+  <li></li>
+</ul>
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+<!-- Enable Button When Text Field Recieves Input -->
+<script>
+$("input[type='text'], input").on("input", function () {      
+  xtoggleColor();
+});
+function xtoggleColor(){  
+  var x = false;  
+    $("input[type='text'], input").each(function(){
+      if($(this).val()==''){
+        x = true;
+      }
+    });
+  if(x){
+    $('.button').addClass("edited");
+  }else{
+    $('.button').removeClass("edited");
+  }
+}
+</script>
+
+<!-- Sets View For Device -->
+<script>
+  $('#dektop').click(function() {
+  $('div').removeAttr('class');
+  $('div').addClass('dektop');
+  $('html').css("background","#1FA4B6");
+});
+
+  $('#tablet').click(function() {
+  $('div').removeAttr('class');
+  $('div').addClass('tablet');
+  $('html').css("background","#BA4C63");
+});
+
+  $('#mobile').click(function() {
+  $('div').removeAttr('class');
+  $('div').addClass('mobile');
+  $('html').css("background","#E27C3E");
+});
+</script>
+</body>
+</html>
