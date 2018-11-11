@@ -7,8 +7,9 @@
 
 <!--TODO-->
 <!--
-Press ENTER to submit test
-Fix reload hangup issue
+•Click ENTER to submit test
+•Fix refresh hangup
+•Validate URL input
 -->
 
 <!DOCTYPE html>
@@ -18,10 +19,10 @@ Fix reload hangup issue
   <title>Responsive Site Test</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta property="og:title" content="Cup O Code | hand-crafted web design and social media services" />
-    <meta property="og:url" content="http://www.cupocode.com" />
+  <meta property="og:title" content="Responsive Site Test" />
+    <meta property="og:url" content="http://www.timkeeley.com/sitetest" />
     <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:image" content="http://www.cupocode.com/img/cupocode-og.jpg" />
+    <meta property="og:image" content="http://www.timkeeley.com/img/timkeeley-og.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:description" 
@@ -40,6 +41,9 @@ Fix reload hangup issue
     outline: none;
 }
 
+* {
+overflow: hidden;
+}
 html {
   background: #1FA4B6;
   overflow-Y: scroll;
@@ -50,6 +54,7 @@ html {
 
 body {
   margin-top: 30px;
+  padding: 20px;
 }
 
 h1 {
@@ -75,7 +80,7 @@ h2 {
 
 ul {
   list-style: none;
-  padding: 0;
+  padding: 5px;
   margin-top: 20px !important;
   margin: 0 auto;
   text-align: justify;
@@ -166,7 +171,7 @@ form {
 .dektop {
   border-bottom: 3rem solid #c7c3c1;
   height: 18rem;
-  width: 32rem;
+  width: auto;
   margin: 0 10px;
 }
 
@@ -176,7 +181,7 @@ form {
   font-size: 2rem;
   position: absolute;
   text-align: center;
-  width: 100%;
+  width: auto;
 }
 .dektop:before {
   
@@ -191,7 +196,7 @@ form {
   height: 4rem;
   margin-left: -3.5rem;
   position: absolute;
-  width: 7rem;
+  width: auto;
   z-index: -1;
 }
 .dektop iframe {
